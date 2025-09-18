@@ -1,7 +1,14 @@
 {
-  "name": "my-website",
+  "name": "my-static-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'No build step needed'"
+    "build": "echo 'Build step skipped'",
+    "start": "npx serve . -p $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
