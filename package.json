@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --port $PORT" // The key fix!
+    "start": "vite preview --port $PORT" 
   }
 }
   },
@@ -17,7 +17,6 @@
   }
 {
   "dependencies": {
-    // ... all your existing dependencies like react, react-dom, vite, etc. ...
-    "serve": "^14.0.0" // <-- ADD THIS LINE if you use 'serve'
+    "serve": "^14.0.0" 
   }
 }
