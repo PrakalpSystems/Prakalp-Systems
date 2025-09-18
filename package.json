@@ -1,10 +1,13 @@
 {
   "name": "my-static-site",
   "version": "1.0.0",
+  {
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --port $PORT" 
+    "start": "vite preview --port $PORT" // The key fix!
+  }
+}
   },
   "dependencies": {
     "serve": "^14.0.0"
@@ -12,3 +15,9 @@
   "engines": {
     "node": ">=18"
   }
+{
+  "dependencies": {
+    // ... all your existing dependencies like react, react-dom, vite, etc. ...
+    "serve": "^14.0.0" // <-- ADD THIS LINE if you use 'serve'
+  }
+}
