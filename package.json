@@ -2,8 +2,9 @@
   "name": "my-static-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Build step skipped'",
-    "start": "npx serve . -p $PORT"
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview --port $PORT" // The key fix!
   },
   "dependencies": {
     "serve": "^14.0.0"
@@ -11,9 +12,3 @@
   "engines": {
     "node": ">=18"
   }
-}
-{
-  "scripts": {
-    "start": "npx serve . -p $PORT"
-  }
-}
