@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --port $PORT" // The key fix!
+    "start": "vite preview --port $PORT" 
   },
   "dependencies": {
     "serve": "^14.0.0"
