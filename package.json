@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple static website",
   "scripts": {
-  "start": npx serve public/ -p $PORT
+  "start": "npx serve public/ -p $PORT"
 }
   },
   "dependencies": {
@@ -12,4 +12,4 @@
   "engines": {
     "node": ">=18"
   }
-}
+
