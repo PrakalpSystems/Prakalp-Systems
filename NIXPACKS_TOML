@@ -1,0 +1,19 @@
+[phases.setup]
+cmds = [
+    "echo 'No setup required for static site'"
+]
+
+[phases.install]
+cmds = [
+    "echo 'No dependencies to install'"
+]
+
+[phases.build]
+cmds = [
+    "echo 'No build process for static files'"
+]
+
+[start]
+cmds = [
+    "python3 -m http.server $PORT --directory ."
+]
