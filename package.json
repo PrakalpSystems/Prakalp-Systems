@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A simple static website",
   "scripts": {
-    "build": "echo 'No build process for static files'",
-    "start": "npx serve . -p $PORT"
+  "start": "npx serve public/ -p $PORT"
+}
   },
   "dependencies": {
     "serve": "^14.0.0"
