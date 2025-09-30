@@ -4,15 +4,12 @@
   "description": "A simple static website",
   "main": "index.html",
   "scripts": {
-    "build": "echo 'No build step required for static site'",
+    "build": "echo 'No build step required'",
     "start": "npx serve . -p $PORT"
   },
   "dependencies": {
     "serve": "^14.2.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "engines": {
     "node": ">=18"
   }
