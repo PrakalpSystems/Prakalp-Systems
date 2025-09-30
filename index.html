@@ -303,67 +303,6 @@
             margin: 0 auto 20px;
         }
         
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, #f0f7ff 0%, #e0edff 100%);
-        }
-        
-        .testimonials-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            display: none;
-        }
-        
-        .testimonial.active {
-            display: block;
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--dark);
-        }
-        
-        .testimonial-role {
-            color: var(--primary);
-            font-size: 14px;
-        }
-        
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-        
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-dot.active {
-            background: var(--primary);
-            transform: scale(1.2);
-        }
-        
         /* Contact */
         .contact-container {
             display: grid;
@@ -763,41 +702,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Client Testimonials</h2>
-                <p class="section-subtitle">What our clients say about our services</p>
-            </div>
-            
-            <div class="testimonials-container">
-                <div class="testimonial active">
-                    <p class="testimonial-text">"Prakalp Systems transformed our data infrastructure with minimal disruption to our operations. Their team was professional, knowledgeable, and delivered beyond our expectations."</p>
-                    <h4 class="testimonial-author">Sarah Johnson</h4>
-                    <p class="testimonial-role">CTO, TechCorp International</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"The cloud migration project was completed ahead of schedule and under budget. We're now enjoying improved performance and scalability thanks to Prakalp Systems."</p>
-                    <h4 class="testimonial-author">Michael Chen</h4>
-                    <p class="testimonial-role">IT Director, Global Solutions Inc.</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"Their custom software solution streamlined our workflow and increased productivity by 40%. The support team is always responsive and helpful."</p>
-                    <h4 class="testimonial-author">Emma Rodriguez</h4>
-                    <p class="testimonial-role">Operations Manager, Enterprise Solutions</p>
-                </div>
-                
-                <div class="testimonial-nav">
-                    <div class="testimonial-dot active" data-index="0"></div>
-                    <div class="testimonial-dot" data-index="1"></div>
-                    <div class="testimonial-dot" data-index="2"></div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -952,49 +856,6 @@
             });
         });
         
-        // Testimonial Carousel
-        const testimonials = document.querySelectorAll('.testimonial');
-        const dots = document.querySelectorAll('.testimonial-dot');
-        
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = dot.getAttribute('data-index');
-                
-                // Hide all testimonials
-                testimonials.forEach(testimonial => {
-                    testimonial.classList.remove('active');
-                });
-                
-                // Remove active class from all dots
-                dots.forEach(d => {
-                    d.classList.remove('active');
-                });
-                
-                // Show selected testimonial
-                testimonials[index].classList.add('active');
-                dot.classList.add('active');
-            });
-        });
-        
-        // Auto rotate testimonials
-        let currentTestimonial = 0;
-        
-        function rotateTestimonials() {
-            testimonials.forEach(testimonial => {
-                testimonial.classList.remove('active');
-            });
-            
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            testimonials[currentTestimonial].classList.add('active');
-            dots[currentTestimonial].classList.add('active');
-            
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        }
-        
-        setInterval(rotateTestimonials, 5000);
         
         // Form submission
         const contactForm = document.getElementById('contactForm');
@@ -1007,4 +868,5 @@
     </script>
 </body>
 </html>
+
 
