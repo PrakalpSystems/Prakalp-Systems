@@ -531,6 +531,88 @@
                 flex-direction: column;
             }
         }
+                /* Expertise Section */
+        .expertise-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .category-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-title {
+            font-size: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+        }
+        
+        .category-title i {
+            font-size: 24px;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .skill-exp {
+            font-size: 14px;
+            color: var(--text);
+        }
+        
+        .skill-level {
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .expertise-footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .expertise-footer p {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--text);
+        }
+
     </style>
 </head>
 <body>
@@ -547,6 +629,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -654,7 +737,174 @@
             </div>
         </div>
     </section>
-
+    <!-- Expertise Section -->
+    <section class="section" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Technical Expertise</h2>
+                <p class="section-subtitle">With decades of combined experience across cutting-edge technologies</p>
+            </div>
+            
+            <div class="expertise-categories">
+                <!-- Data & Analytics Platforms -->
+                <div class="category-card">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        Data & Analytics Platforms
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">SAS 9.4 & Viya</span>
+                            <span class="skill-exp">18+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Ab Initio</span>
+                            <span class="skill-exp">14+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python/PySpark</span>
+                            <span class="skill-exp">8+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache Nifi & Superset</span>
+                            <span class="skill-exp">2+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & Big Data -->
+                <div class="category-card">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        Cloud & Big Data
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Microsoft Azure</span>
+                            <span class="skill-exp">5+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Azure Databricks</span>
+                            <span class="skill-exp">5+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS Platform</span>
+                            <span class="skill-exp">3+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache Airflow</span>
+                            <span class="skill-exp">6+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Frameworks -->
+                <div class="category-card">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Development Frameworks
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Java Full Stack</span>
+                            <span class="skill-exp">10+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">.NET Full Stack</span>
+                            <span class="skill-exp">12+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Django</span>
+                            <span class="skill-exp">5+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache Scala</span>
+                            <span class="skill-exp">4+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Databases & BI -->
+                <div class="category-card">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Databases & Business Intelligence
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Oracle, MSSQL, MySQL</span>
+                            <span class="skill-exp">15+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL, Greenplum</span>
+                            <span class="skill-exp">15+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Snowflake</span>
+                            <span class="skill-exp">15+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Microsoft Power Platform</span>
+                            <span class="skill-exp">5+ Years</span>
+                            <div class="skill-level">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="expertise-footer">
+                <p>Plus expertise in: PHP Development, Apache Tomcat, DevOps Tools, AI Agents & Workflows, and Legacy System Migrations</p>
+                <a href="#contact" class="btn">Discuss Your Project</a>
+            </div>
+        </div>
+    </section>
     <!-- Process Section -->
     <section class="section" id="process">
         <div class="container">
@@ -863,6 +1113,7 @@
     </script>
 </body>
 </html>
+
 
 
 
